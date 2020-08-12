@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pioneer Bank</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 class="text-center heading">Pioneer Bank</h1>
+<div class="container">
+    <div id="login-area">
+        <h1 class="text-center">Welcome To Our Service</h1>
+        <p class="text-center" id="date-time"></p>
+        <div class="submit-area">
+            <h4>Login</h4>
+          <div class="form-group">
+            <input type="text" class="form-control" id="user-name" placeholder="Enter User Name">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" placeholder="Enter Email">
+          </div>
+          <button type="submit" id="register" class="btn btn-success">Register</button>
+        </div>
+    </div>
+    <div class="transaction-area">
+        <h1 class="text-center history">Transaction History</h1>
+        <hr/>
+        <p class="text-center" id="tr-time"></p>
+        <h3 class="common">USER NAME: <u><span id="userName"></span></u></h3>
+        <h3 class="common">USER EMAIL: <u><span id="userEmail"></span></u></h3>
+        <hr/>
+        <div class="row">
+            <div class="col-md-4">
+                <div id="deposit" class="status">
+                    <h5>Deposit</h5>
+                    <h2>$ <span id="show-deposit">00</span></h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="withdraw" class="status">
+                    <h5>Withdraw</h5>
+                    <h2>$ <span id="show-withdraw">00</span></h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="balance" class="status">
+                    <h5>Balance</h5>
+                    <h2>$ <span id="show-balance">00</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="submit-area">
+                    <h4>Deposit</h4>
+                    <input type="text" class="form-control" id="deposit-value" placeholder="Enter deposit value">
+                    <br/>
+                    <button class="btn btn-success" id="deposit-btn" type="submit">Deposit</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="submit-area">
+                    <h4>Withdraw</h4>
+                    <input type="text" class="form-control" id="withdraw-value" placeholder="Enter withdraw value">
+                    <br/>
+                    <button class="btn btn-danger" id="withdraw-btn" type="submit">Withdraw</button>
+                </div>
+            </div>
+        </div>
+        <br/>
+            <h4 class="text-center">Github: <a href="https://github.com/HelloKowshik">Say Hello</a></h4>
+    </div>
+</div>
+<script src="app.js"></script>    
+</body>
+</html>
