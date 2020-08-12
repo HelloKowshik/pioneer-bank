@@ -6,11 +6,12 @@ const emailInput = document.querySelector('#email');
 const date = new Date();
 
 
-dateTime.innerHTML = `${date.getDate()} - ${date.getMonth()+1} - ${date.getFullYear()}`;
+dateTime.innerHTML = `${date.getDate()} - ${(date.getMonth()+1)< 10 ? '0'+(date.getMonth()+1) : (date.getMonth()+1)} - ${date.getFullYear()} :: ${date.toTimeString()}`;
 
 
 btn.addEventListener('click',e=>{
-    loginArea.remove();
+    // loginArea.remove();
+    loginArea.style.display = 'none';
     const transactionArea = document.querySelector('.transaction-area');
     transactionArea.style.display = 'block';
     const trTime = document.querySelector('#tr-time');
@@ -23,8 +24,12 @@ btn.addEventListener('click',e=>{
     let showWithdraw = document.querySelector('#show-withdraw');
     const userName = document.querySelector('#userName');
     const userEmail = document.querySelector('#userEmail');
-
-    trTime.innerHTML = `${date.getDate()} - ${(date.getMonth()+1)< 10 ? '0'+(date.getMonth()+1) : (date.getMonth()+1)} - ${date.getFullYear()}`;
+    const backBtn = document.querySelector('.back-btn');
+    backBtn.addEventListener('click',()=>{
+        transactionArea.style.display = 'none';
+        loginArea.style.display = 'block';
+    })
+    trTime.innerHTML = `${date.getDate()} - ${(date.getMonth()+1)< 10 ? '0'+(date.getMonth()+1) : (date.getMonth()+1)} - ${date.getFullYear()}:: ${date.toTimeString()}`;
     userName.textContent = nameInput.value.toString() || 'annonymus-user';
     userEmail.textContent = emailInput.value.toString() || 'guest@bank.com';
 
