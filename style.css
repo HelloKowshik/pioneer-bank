@@ -22,9 +22,9 @@ body{
 }
 .status{
     color: whitesmoke;
-    margin: 0 20px;
-    padding: 20px;
-    border-radius: 10px;
+    margin: 0 5px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .history{

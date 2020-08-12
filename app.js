@@ -34,8 +34,8 @@ btn.addEventListener('click',e=>{
             alert('Not a valid Input,try again!');
             depositValue.value = '';
         }else{
-            showDeposit.innerHTML = Number((parseFloat(showDeposit.innerHTML) + deposit).toFixed(8));
-            showBalance.innerHTML = Number((parseFloat(showBalance.innerHTML) + deposit).toFixed(8));
+            showDeposit.innerHTML = Number((parseFloat(showDeposit.innerHTML) + deposit).toFixed(4));
+            showBalance.innerHTML = Number((parseFloat(showBalance.innerHTML) + deposit).toFixed(4));
             depositValue.value = '';
         }
     });
@@ -46,8 +46,8 @@ btn.addEventListener('click',e=>{
             alert('Invalid Input,Try Again!');
             withdrawValue.value = '';
         }else{
-            showWithdraw.innerHTML = Number((parseFloat(showWithdraw.innerHTML) + withdraw).toFixed(8));
-            showBalance.innerHTML = Number((parseFloat(showBalance.innerHTML) - withdraw).toFixed(8));
+            showWithdraw.innerHTML = Number((parseFloat(showWithdraw.innerHTML) + withdraw).toFixed(4));
+            showBalance.innerHTML = Number((parseFloat(showBalance.innerHTML) - withdraw).toFixed(4));
             withdrawValue.value = '';
         }
     })
