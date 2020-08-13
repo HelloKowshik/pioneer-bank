@@ -40,11 +40,11 @@ body{
 }
 
 #deposit{
-    background-color: tomato;
+    background-color: #006400;
 }
 #withdraw{
-    background-color: cyan;
+    background-color: #8B0000;
 }
 #balance{
-    background-color: salmon;
+    background-color: #DC143C;
 }
